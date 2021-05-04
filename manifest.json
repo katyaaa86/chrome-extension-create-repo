@@ -1,0 +1,17 @@
+{
+    "name": "GitHub Creator",
+    "description": "Create new repository",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+        },
+    "permissions": ["activeTab", "tabs"],
+    "action": {
+        "default_icon": "github.png"
+    },
+    "content_scripts": [{
+        "matches": ["https://github.com/*"],
+        "js": ["content.js"]
+      }]
+  }
